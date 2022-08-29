@@ -20,7 +20,7 @@ module AliyunSDKCore
       self.security_token    = config[:security_token]
       self.opts              = config[:opts] || {}
       self.verbose           = verbose.instance_of?(TrueClass) && verbose
-      self.codes             = Set.new [200, '200', 'OK', 'Success']
+      self.codes             = Set.new [100, '100', 'OK', 'Success']
       self.codes.merge config[:codes] if config[:codes]
     end
 
